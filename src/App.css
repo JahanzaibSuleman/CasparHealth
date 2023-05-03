@@ -1,0 +1,50 @@
+/* Add your CSS here. This file should */
+/* automatically hot reload into the app on save */
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  color: rgba(0, 0, 0, 0.85);
+  margin: 0;
+}
+
+.data-table {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.data-table:not(.table-header) {
+  box-shadow: 0 0 15px 2px #ececec;
+}
+
+.data-table table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.data-table thead tr {
+  background-color: #fafafa;
+}
+
+.data-table tr {
+  height: 55px;
+  font-size: 14px;
+  padding: 16px;
+  border-width: 1px 0 1px 0;
+  border-color: #f0f0f0;
+  border-style: solid;
+}
+
+.data-table tr:hover {
+  background-color: #fafafa;
+}
+
+.data-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.error {
+  height: 25px;
+  color: rgba(255, 0, 0, 0.75);
+}
