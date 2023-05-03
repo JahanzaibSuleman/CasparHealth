@@ -70,6 +70,13 @@ const PatientDetails: React.FC = () => {
                                 </Button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <Button variant="outlined" onClick={() => { navigate('/') }}>
+                                    Go Back
+                                </Button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 : <p>No Patient found</p>}

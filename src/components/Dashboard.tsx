@@ -32,9 +32,7 @@ const Dashboard: React.FC = () => {
     }, [patients, exceptionData, query, isSorted, gender, age]);
 
     useEffect(() => {
-        if (!patientsData.length) {
-            setError('List is empty.');
-        }
+        setError(patientsData.length ? '' : 'List is empty.');
     }, [patientsData]);
 
 
@@ -108,14 +106,13 @@ const Dashboard: React.FC = () => {
                     <Box sx={{ mt: 4 }}>
                         <PatientsList patientsList={patientsData} />
                     </Box>
-                    {!isLoading && (
-                        <Box sx={{ mt: 4 }}>
-                            <p className="error">
-                                <small>{error}</small>
-                            </p>
-                        </Box>
-                    )}
-                </Box>}
+                    <Box sx={{ mt: 4 }}>
+                        <p className="error">
+                            <small>{error}</small>
+                        </p>
+                    </Box>
+                </Box>
+            }
         </Box>
     );
 }
